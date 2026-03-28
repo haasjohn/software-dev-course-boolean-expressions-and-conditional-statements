@@ -49,14 +49,15 @@ Add Customization and expand the game:
   - Use nested conditionals and logical operators to create complex outcomes.
 
 */
-console.log("You see two more paths: one leads to the river, the other to the village.");
+//river and paddle / woods and axe
+console.log("You see two more paths: one leads to the river, the other to the woods.");
 const choice = readline.question("Do you go to the 'river' or the 'woods'?");
-if (choice === "river" && hasTorch) {
+if (choice === "river" && hasPaddle) {
   console.log("You safely navigate along river.");
-} else if (choice === "river" && !hasTorch) {
-  console.log("It's too dark to proceed. You decide to turn back.");
-} else if (choice === "village" || hasMap) {
-  console.log("You find your way to the village.");
+} else if (choice === "river" && !hasPaddle) {
+  console.log("It's too choppy to proceed. You decide to turn back.");
+} else if (choice === "woods" || hasAxe) {
+  console.log("You find your way to the woods.");
 } else {
-  console.log("You get lost and wander aimlessly.");
+  console.log("You continue getting lost and wander aimlessly.");
 }
