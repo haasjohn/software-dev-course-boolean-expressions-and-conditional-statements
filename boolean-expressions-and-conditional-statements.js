@@ -43,10 +43,20 @@ if (choice === "mountains" && hasTorch) {
 }
 
 /* 
-
 Add Customization and expand the game:
   - Add more choices and scenarios.
   - Include additional items (e.g., a sword, a compass).
   - Use nested conditionals and logical operators to create complex outcomes.
 
 */
+console.log("You see two more paths: one leads to the river, the other to the village.");
+const choice = readline.question("Do you go to the 'river' or the 'woods'?");
+if (choice === "river" && hasTorch) {
+  console.log("You safely navigate along river.");
+} else if (choice === "river" && !hasTorch) {
+  console.log("It's too dark to proceed. You decide to turn back.");
+} else if (choice === "village" || hasMap) {
+  console.log("You find your way to the village.");
+} else {
+  console.log("You get lost and wander aimlessly.");
+}
