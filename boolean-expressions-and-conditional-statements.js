@@ -30,7 +30,7 @@ const hasTorch = true;
 const hasMap = false;
 
 console.log("You see two paths: one leads to the mountains, the other to the village.");
-const choice = readline.question("Do you go to the 'mountains' or the 'village'?");
+choice = readline.question("Do you go to the 'mountains' or the 'village'?");
 
 if (choice === "mountains" && hasTorch) {
   console.log("You safely navigate through the dark mountains.");
@@ -42,16 +42,11 @@ if (choice === "mountains" && hasTorch) {
   console.log("You get lost and wander aimlessly.");
 }
 
-/* 
-Add Customization and expand the game:
-  - Add more choices and scenarios.
-  - Include additional items (e.g., a sword, a compass).
-  - Use nested conditionals and logical operators to create complex outcomes.
 
-*/
 //river and paddle / woods and axe
 console.log("You see two more paths: one leads to the river, the other to the woods.");
-const choice = readline.question("Do you go to the 'river' or the 'woods'?");
+choice = readline.question("Do you go to the 'river' or the 'woods'?");
+
 if (choice === "river" && hasPaddle) {
   console.log("You safely navigate along river.");
 } else if (choice === "river" && !hasPaddle) {
